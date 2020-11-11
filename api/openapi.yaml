@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: sample api
+  version: 1.0.0
+servers:
+- url: http://localhost:{port}
+paths:
+  /message:
+    get:
+      summary: sample api get operation
+      description: 'sample api get: operation'
+      operationId: messageGET
+      responses:
+        "200":
+          description: success operation
+          content:
+            application/json:
+              schema:
+                type: string
+                example: hello world!
+                x-content-type: application/json
+      x-swagger-router-controller: Default
+components: {}
